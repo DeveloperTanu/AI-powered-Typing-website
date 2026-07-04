@@ -7,6 +7,7 @@ langchain-core
 langchain-groq
 langchain-google-genai
 langchain-huggingface
+langchain-mistralai
 python-dotenv
 transformers
 torch
@@ -15,3 +16,4 @@ tiktoken
 faiss-cpu
 uvicorn
 requests
+jinja2
