@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/output.css">
+    <title>Typing Game</title>
+</head>
+
+<body class="min-h-screen bg-gray-900 text-white">
+    <div class="flex flex-col pt-16 px-12 items-center justify-center">
+        <div class="flex items-center justify-center max-w-5xl py-4 space-x-2 mb-12">
+
+            <div id="text" class="text-3xl text-gray-600 leading-relaxed flex-1 pr-6"></div>
+
+            <button id="reload" class="shrink-0 cursor-pointer rounded-full px-4 py-2
+               bg-gray-700 border border-gray-500
+               hover:bg-gray-500 active:bg-gray-800">
+                Reload
+            </button>
+
+        </div>
+        <div class="bg-gray-800 border border-gray-600 py-4 px-4 flex flex-col gap-y-3 rounded-lg">
+
+            <div id="row-1" class="flex items-center justify-center space-x-1.5">
+                <div id="1" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">1</div>
+                <div id="2" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">2</div>
+                <div id="3" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">3</div>
+                <div id="4" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">4</div>
+                <div id="5" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">5</div>
+                <div id="6" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">6</div>
+                <div id="7" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">7</div>
+                <div id="8" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">8</div>
+                <div id="9" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">9</div>
+                <div id="0" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">0</div>
+                <div id="-" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">-</div>
+                <div id="=" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">=</div>
+                <div id="BACKSPACE"
+                    class="cursor-pointer py-3 px-2.5 rounded-md bg-gray-600 text-white hover:bg-gray-700">🡠 Backspace
+                </div>
+            </div>
+
+            <div id="row-2" class="flex items-center justify-center space-x-1.5">
+                <div id="TAB" class="cursor-pointer py-3 px-5 rounded-md bg-gray-600 text-white hover:bg-gray-700">tab
+                </div>
+                <div id="Q" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">Q</div>
+                <div id="W" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">W</div>
+                <div id="E" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">E</div>
+                <div id="R" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">R</div>
+                <div id="T" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">T</div>
+                <div id="Y" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">Y</div>
+                <div id="U" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">U</div>
+                <div id="I" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">I</div>
+                <div id="O" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">O</div>
+                <div id="P" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">P</div>
+                <div id="[" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">[</div>
+                <div id="]" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">]</div>
+                <div id="Backslash" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">\</div>
+            </div>
+
+            <div id="row-3" class="flex space-x-1.5 items-center justify-center">
+                <div id="CAPS" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">caps
+                    lock</div>
+                <div id="A" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">A</div>
+                <div id="S" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">S</div>
+                <div id="D" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">D</div>
+                <div id="F" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">F</div>
+                <div id="G" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">G</div>
+                <div id="H" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">H</div>
+                <div id="J" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">J</div>
+                <div id="K" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">K</div>
+                <div id="L" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">L</div>
+                <div id=";" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">;</div>
+                <div id="'" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">'</div>
+                <div id="ENTER" class="cursor-pointer py-3 px-3 rounded-md bg-gray-600 text-white hover:bg-gray-700">
+                    Enter</div>
+            </div>
+
+            <div id="row-4" class="flex space-x-1.5 items-center justify-center">
+                <div id="SHIFT" class="cursor-pointer py-3 px-6 rounded-md bg-gray-600 text-white hover:bg-gray-700">
+                    Shift 🡡</div>
+                <div id="Z" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">Z</div>
+                <div id="X" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">X</div>
+                <div id="C" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">C</div>
+                <div id="V" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">V</div>
+                <div id="B" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">B</div>
+                <div id="N" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">N</div>
+                <div id="M" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">M</div>
+                <div id="," class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">,</div>
+                <div id="." class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">.</div>
+                <div id="/" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">/</div>
+                <div id="SHIFT" class="cursor-pointer py-3 px-6 rounded-md bg-gray-600 text-white hover:bg-gray-700">
+                    Shift 🡡</div>
+            </div>
+            <div id="row-5" class="flex space-x-1.5 items-center justify-center">
+                <div id="CTRL-1" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">
+                    ctrl</div>
+                <div id="FUNCTION-1"
+                    class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">fn</div>
+                <div id="WINDOWS" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">
+
+                    <div class="grid grid-cols-2 gap-0.5 py-0.5">
+                        <div class="bg-white w-2 h-2"></div>
+                        <div class="bg-white w-2 h-2"></div>
+                        <div class="bg-white w-2 h-2"></div>
+                        <div class="bg-white w-2 h-2"></div>
+                    </div>
+                </div>
+                <div id="ALT-1" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">alt
+                </div>
+                <div id="SPACE" class="cursor-pointer py-6 px-41.5 rounded-md bg-gray-600 text-white hover:bg-gray-700">
+                </div>
+                <div id="ALT-2" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">alt
+                </div>
+                <div id="CTRL-2" class="cursor-pointer py-3 px-4 rounded-md bg-gray-600 text-white hover:bg-gray-700">
+                    ctrl</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/src/script.js"></script>
+</body>
+
+</html>
