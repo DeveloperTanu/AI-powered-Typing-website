@@ -29,7 +29,7 @@ function renderText() {
 }
 
 async function getAIText() {
-    let response = await fetch("http://127.0.0.1:8000/generate-text");
+    let response = await fetch("/generate-text");
     let data = await response.json();
 
     word = data.text.trim();
