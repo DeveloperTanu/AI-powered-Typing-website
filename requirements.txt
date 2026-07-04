@@ -7,11 +7,13 @@ langchain-core
 langchain-groq
 langchain-google-genai
 langchain-huggingface
+langchain-mistralai
 python-dotenv
 transformers
 torch
-flask
+fastapi
 tiktoken
 faiss-cpu
 uvicorn
 requests
+jinja2
