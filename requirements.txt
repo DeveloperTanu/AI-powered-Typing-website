@@ -11,6 +11,7 @@ python-dotenv
 transformers
 torch
 flask
+fastapi
 tiktoken
 faiss-cpu
 uvicorn
